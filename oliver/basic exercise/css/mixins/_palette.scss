@@ -1,0 +1,19 @@
+
+@mixin colors() {
+   $nav-background: #EF2F88;
+   $a-hover-background:  rgb(196, 10, 190);
+   $-color: greenyellow; 
+   $container-color: black;
+   $item-color: black; 
+   $item-fallback-background: purple; 
+   $body-background:#000;
+
+   }
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+   }

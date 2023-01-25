@@ -1,0 +1,42 @@
+@import "partials/resets";
+@import "partials/mixin";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+h1{
+    color: red;
+}
+
+body{
+    background-color: $background-desktop;
+}
+nav{
+    background-color: $light-blue;
+    text-align: center;
+    u1{
+        list-style:none;
+        li{
+            padding: 1rem 1.5 rem;  
+            display: inline-block;
+        }
+        a{
+            text-decoration:none;
+            font-size: 1.2 rem;
+            font-weight: 600;
+            color: $white-color;
+            text-transform: uppercase;
+            &:hover{
+                color: $white-color;
+            }
+        }
+    }
+
+}
