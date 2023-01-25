@@ -6,22 +6,20 @@
 
 
 
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 body{
-    background-image: url($img_dir+"smartphone2.jpg");
+    // background-image: url($img_dir+"smartphone2.jpg");
     background-size: 100%;
 }
 
 nav {
-    
     background-color: $nav-background;
     display: flex;
-
     overflow: hidden;
 }
 
@@ -46,7 +44,6 @@ a {
     transition: background-color .1s linear;
     font-size: 2vw;
     border-radius: 15px;
-
     transition: width 0.1s, height 0.1s, ease-in-out 0.5s;
     
 }
@@ -56,17 +53,10 @@ a:hover {
     padding: 2vh 30px 20px 30px;
     color: $a-color;
     font-size: 2.3vw;
-    
-   
-}
-.container{
-    display:flex;
-    width:100%;
-    height:100%;
-}
+    }
+
 .hero{
     display:flex;
-    
     flex-flow: column nowrap;
     justify-content: center;
     align-content: flex-start;
@@ -82,7 +72,6 @@ a:hover {
     display: grid;
     gap: 1em 1em;
     padding:1em;
-    
     color: $container-color;
     font-size: 200%;
     width: 100vw;
@@ -97,7 +86,6 @@ a:hover {
  object-fit:cover;
  background: $item-fallback-background; /*fall-back if gradients are not supported by browser*/
  background-size: cover;
-
 }
 .item1{
     grid-area: 1/1/1/span 2;
@@ -107,29 +95,75 @@ a:hover {
     @extend .item;
     grid-area: 1/3/span 2/span 2;
     background-image: url($img_dir+"forest2.jpg" );
-
 }
 .item3{
     @extend .item;
     background-image: url($img_dir+"forest3.jpg");
-    
 }
 .item4{
     @extend .item;
     background-image: url($img_dir+"forest4.jpg");
-    
 }
 .item5{
     @extend .item;
     grid-area: 3/1/span 1/span 2;
     background-image: url($img_dir+"forest5.jpg");
-    
 }
 .item6{
     @extend .item;
     grid-area: 3/3/span 1/span 2;
     background-image: url($img_dir+"forest6.jpg" );
-    
 }
-@import "partials/grid_lines";
+// @import "partials/grid_lines";
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: lightgreen;
+        
+    }
+    .container{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+    body {
+        background-color: deepskyblue;
+        .container{
+            grid-template-columns: 1fr 1fr ;
+        }
+        .item1{
+            grid-area: 1/1/1/span 2;
+            
+            }
+        .item2{
+            
+            grid-area: 2/1/span 2/span 2;
+            
+        }
+        .item3{
+            
+            grid-area: 4/1/span 1/span 1;
+        }
+        .item4{
+           
+            grid-area: 4/2/span 1/span 1;
+        }
+        .item5{
+            
+            grid-area: 4/1/span 1/span 1;
+            
+        }
+        .item6{
+            
+            grid-area: 5/1/span 1/span 2;
+            
+        }
+    }
+}
+@media screen and (min-width:1201px) {
+    body {
+        background-color: darksalmon;
+    }
+}
 
